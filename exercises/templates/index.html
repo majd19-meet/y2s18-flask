@@ -7,9 +7,29 @@
 </head>
 
 <body>
-	<h1>PILATES!!</h1>
-	<p1>Because it's the best one</p1> <br>
-	<p2>ORANGE IS DISGUSTING!!!!</p2>
+	{% if like_same_music == True %}
+		<p> I like those Musicians </p>
+	{% else %}
+		<p> Those Musicians are the best </p>
+	{% endif %}
+
+	<h1>Hello People!</h1>
+	<p1>My favorite players are:</p1> <br>
+	<!-- <p2>ORANGE IS DISGUSTING!!!!</p2> -->
+	<ul>
+		{% for player in players%}
+		<li> {{player}} </li>
+	{% endfor %}
+	<ul>
+
+	<table border = "2">
+		<tr>
+			<td><img src="./static/samuel.jpeg" width="400px" height="200px"></td>
+			<td><img src="./static/lindsey.jpeg" width="400px" height="200px"></td>
+			<td><img src="./static/david.jpeg" width="400px" height="200px"></td>
+		</tr>
+
+
 </body>
 
 </html>
